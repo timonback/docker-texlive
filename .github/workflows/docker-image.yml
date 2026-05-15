@@ -23,7 +23,8 @@ jobs:
       id: push
       uses: docker/build-push-action@master
       with:
-        file: Dockerfile
+        context: ./image
+        file: ./image/Dockerfile
         push: false
         tags: timonback/texlive:latest
 
@@ -45,7 +46,8 @@ jobs:
       id: push
       uses: docker/build-push-action@master
       with:
-        file: Dockerfile
+        context: ./image
+        file: ./image/Dockerfile
         push: true
         tags: timonback/texlive:latest
       
